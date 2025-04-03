@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Floating Navigation */
+.floating-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 50px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.floating-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.floating-nav li {
+    margin: 0 15px;
+}
+
+.floating-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.floating-nav a:hover {
+    color: #86b389;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #00d4ff;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #aa5f5f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.typing {
+    font-size: 1.5rem;
+    color: #164a55;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center/cover;
+    z-index: 1;
+    animation: parallax 20s infinite linear;
+}
+
+/* Skills Section */
+.skills {
+    padding: 100px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #093d47;
+}
+#getme {
+    color: #c5ccd3;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: #00d4ff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Certificate Section */
+.certificates {
+    padding: 100px 20px;
+    background: #c5ccd3;
+    text-align: center;
+}
+
+.cert-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cert-img {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.cert-img:hover {
+    transform: scale(1.1);
+}
+
+.cert-container p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 15px;
+    background: #00d4ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0099cc;
+}
+
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.email-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #00d4ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.email-link:hover {
+    background: #3db1d8;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes parallax {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -200px; }
+}
+
+/* Particles */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
